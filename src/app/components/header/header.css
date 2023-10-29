@@ -1,0 +1,12 @@
+header {
+    transition: transform 0.3s;
+}
+
+.mobile-nav {
+    position: fixed;
+    bottom: 0px;
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+}
