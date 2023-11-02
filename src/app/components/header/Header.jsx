@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import './header.css';
 
 const Header = () => {
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(true);
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -27,10 +27,13 @@ const Header = () => {
   }, [lastScrollPosition]);
 
   return (
-    <header className={`${hidden ? 'header-hidden' : ''}  h-[80px] bg-blue-400 flex justify-center xl:h-[80px] fixed w-full `}>
-      <Nav />
-      <nav id='mobile-nav' className={`${hidden ? 'mobile-nav' : 'mobile-nav-hidden'} fixed bottom-0 xl:static w-full xl:w-[200px] bg-red-800 h-[70px] xl:h-full`}></nav>
-    </header>
+    <div className='h-[80px] w-full'>
+      <header className={`${hidden ? '' : 'header-hidden'} h-[80px] bg-blue-400 flex justify-center xl:h-[80px] top-0 fixed w-full`}>
+        <Nav />
+        <nav id='mobile-nav' className={`${hidden ? 'mobile-nav-hidden' : 'mobile-nav'} fixed bottom-0 xl:static w-full xl:w-[200px] bg-red-800 h-[70px] xl:h-full`}></nav>
+      </header>
+    </div>
+
   )
 }
 
