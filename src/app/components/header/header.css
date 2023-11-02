@@ -1,12 +1,11 @@
-header {
-    transition: transform 0.3s;
+header, #mobile-nav {
+    transition: margin 0.3s ease-in-out;
 }
 
-.mobile-nav {
-    position: fixed;
-    bottom: 0px;
+.mobile-nav-hidden {
+    margin-bottom: -80px;
 }
 
 .header-hidden {
-    transform: translateY(-100%);
+    margin-top: -80px;
 }

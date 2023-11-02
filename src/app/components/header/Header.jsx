@@ -27,9 +27,9 @@ const Header = () => {
   }, [lastScrollPosition]);
 
   return (
-    <header className={`${hidden ? 'header-hidden' : ''} first-line:h-[80px] bg-blue-400 flex justify-center xl:h-[80px] fixed w-full `}>
+    <header className={`${hidden ? 'header-hidden' : ''}  h-[80px] bg-blue-400 flex justify-center xl:h-[80px] fixed w-full `}>
       <Nav />
-      <nav className={`${hidden ? '' : ''} xl:static w-full xl:w-[200px] bg-red-800 h-[70px] xl:h-full`}></nav>
+      <nav id='mobile-nav' className={`${hidden ? 'mobile-nav' : 'mobile-nav-hidden'} fixed bottom-0 xl:static w-full xl:w-[200px] bg-red-800 h-[70px] xl:h-full`}></nav>
     </header>
   )
 }
