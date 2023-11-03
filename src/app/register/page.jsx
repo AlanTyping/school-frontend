@@ -9,7 +9,7 @@ import SecondForm from "./secondForm/SecondForm";
 
 const page = () => {
   const [formData, setFormData] = useState({name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false})
-  const [secondForm, setSecondForm] = useState(false);
+  const [secondForm, setSecondForm] = useState(true);
 
   function handleInputChange(e) {
     const { name, value } = e.target;

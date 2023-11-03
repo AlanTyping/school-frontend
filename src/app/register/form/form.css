@@ -1,0 +1,17 @@
+input {
+    border-radius: 0.25rem;
+    background-color: #5f0a0a;
+    width: 90%;
+    padding: 1rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+span {
+    width: 90%;
+    text-align: start;
+    color: #2563eb;
+    padding: 0.5rem;
+    margin-top: -0.8rem;
+}
+
