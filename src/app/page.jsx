@@ -9,43 +9,41 @@ import SectionThree from './sections/section 3/SectionThree';
 import Footer from './components/footer/Footer';
 
 export default function Home() {
-  // const defaultQueryFn = async () => {
-  //   const { data } = await axios.get(
-  //     `http://localhost:2000/api/auth/users`,
-  //   )
-  //   return data
-  // }
+  const defaultQueryFn = async () => {
+    const { data } = await axios.get(
+      `http://localhost:2000/api/auth/users`,
+    )
+    return data
+  }
 
-  // const { status, data, error, isFetching, isLoading } = useQuery({
-  //   queryKey: ['asdasdasd'],
-  //   queryFn: defaultQueryFn
-  // })
+  const { status, data, error, isFetching, isLoading } = useQuery({
+    queryKey: ['asdasdasd'],
+    queryFn: defaultQueryFn
+  })
 
-  // if (isLoading) return 'Loading...'
+  if (isLoading) return 'Loading...'
 
-  // if (error) {
-  //   console.log(error)
-  //   return 'An error has occurred: ' + error.message
-  // }
-
-  
+  if (error) {
+    console.log(error)
+    return 'An error has occurred: ' + error.message
+  }
 
   return (
     <div className='flex flex-col items-center'>
       <Header />
-      <Section />
-      <SectionThree />
-      <SectionTwo />
-      <Footer />
-      {/* {data.map(e =>
-        <div className='h-[300px] w-[50%] my-4 rounded bg-slate-700 flex flex-col items-start p-5 justify-center'>
+      {data.map(e =>
+        <div className='h-[300px] w-[50%] my-4 rounded bg-slate-700 text-white flex flex-col items-start p-5 justify-center'>
           <h1>Username: {e.username}</h1><br />
           <h2>Name: {e.name}</h2>
           <h2>lastName: {e.lastName}</h2>
           <h2>Email: {e.email}</h2>
           <h2>password: {e.password}</h2>
         </div>
-      )} */}
+      )}
+      <Section />
+      <SectionThree />
+      <SectionTwo />
+      <Footer />
     </div>
   )
 }

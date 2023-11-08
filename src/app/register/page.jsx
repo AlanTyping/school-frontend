@@ -9,7 +9,7 @@ import SecondForm from "./secondForm/SecondForm";
 
 const page = () => {
   const [formData, setFormData] = useState({name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false})
-  const [secondForm, setSecondForm] = useState(true);
+  const [secondForm, setSecondForm] = useState(false);
 
   function handleInputChange(e) {
     const { name, value } = e.target;
@@ -18,6 +18,11 @@ const page = () => {
       [name]: value,
     });
     console.log(formData)
+  }
+
+  const handleDataSubmit = () => {
+    console.log(formData);
+    alert(formData)
   }
 
   return (
@@ -33,7 +38,7 @@ const page = () => {
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
 
-          {secondForm ? <SecondForm handleInputChange={handleInputChange} /> : <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm} />}
+          {secondForm ? <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} /> : <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm} />}
         </div>
       </div>
 

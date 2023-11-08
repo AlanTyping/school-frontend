@@ -20,12 +20,14 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 
 			<input name='name' type="text" placeholder="Nombre"
 				{...register('name', { required: { value: true, message: '*Nombre requerido' }, minLength: { value: 1, message: '*Mínimo 1 carácter'}, maxLength: { value: 15, message: '*Máximo 15 carácteres'} })}
+				onChange={handleInputChange}
 			/>
 			{errors.name && <span>{errors.name.message}</span>}
 
 
 			<input name='lastName' type="text" placeholder="Apellido"
 				{...register('lastName', { required: { value: true, message: '*Apellido requerido' }, maxLength: { value: 15, message: '*Máximo 15 carácteres'} })}
+				onChange={handleInputChange}
 			/>
 			{errors.lastName && <span>{errors.lastName.message}</span>}
 
@@ -35,12 +37,14 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 
 			<input name='password' type="password" placeholder="Contraseña"
 				{...register('password', { required: { value: true, message: '*Contraseña requerida' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, maxLength: { value: 30, message: '*Máximo 30 carácteres'} })}
+				onChange={handleInputChange}
 			/>
 			{errors.password && <span>{errors.password.message}</span>}
 
 
 			<input name='confirmPassword' type="password" placeholder="Confirmar contraseña"
 				{...register('confirmPassword', { required: { value: true, message: '*Confirmar contraseña' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, maxLength: { value: 30, message: '*Máximo 30 carácteres'} })}
+				onChange={handleInputChange}
 			/>
 			{errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
 
