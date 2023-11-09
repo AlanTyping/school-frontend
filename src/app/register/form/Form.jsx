@@ -47,7 +47,7 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 			{errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
 
 			<div className="w-full h-[auto] mt-6 flex items-center justify-center">
-				<button className="bg-[#1b7423] py-2 w-[90%] rounded" type="submit">Siguiente</button>
+				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Siguiente</button>
 			</div>
 		</form>
 	)

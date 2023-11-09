@@ -53,7 +53,7 @@ const SecondForm = ({ handleInputChange, handleDataSubmit }) => {
 			<ReCAPTCHA sitekey="6Lfg7OEoAAAAAO-0UlVU_kEtcTEp4b_U05YevLHi" />
 
 			<div className="w-full h-[auto] mt-8 flex items-center justify-center">
-				<button className="bg-[#1b7423] py-2 w-[90%] rounded" type="submit">Submit</button>
+				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Submit</button>
 			</div>
 		</form>
 	)

@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer";
 import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
 
-const page = () => {
+const Page = () => {
   const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false })
   const [secondForm, setSecondForm] = useState(false);
 
@@ -48,7 +48,7 @@ const page = () => {
 
   )
 }
-export default page
+export default Page
 
 
 
