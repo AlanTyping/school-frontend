@@ -25,16 +25,16 @@ const Page = () => {
   }
 
   return (
-    <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#bc834f] text-[#b9b9b9] text-[1.2rem]">
+    <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#1f1f1f] text-[#b9b9b9] text-[1.2rem]">
       <GeneralHeader />
       
       <div className="mb-20 w-full flex items-start justify-center lg:h-[100vh]">
-        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[20vw] pb-8 pt-2 p-2 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
+        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[20vw] pb-8 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
-          <div id="register-title" className="w-[90%] mt-2 p-3 flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded">
+          <div id="register-title" className="w-full p-6 flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded">
             <h1>Registrate!</h1>
           </div>
-          <div id="text-counter" className="w-[90%] mt-1 h-auto flex items-center justify-end text-[0.9rem]">
+          <div id="text-counter" className="w-[90%] mt-1 px-2 h-auto flex items-center justify-end text-[0.9rem]">
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
 
