@@ -24,7 +24,7 @@ const Page = () => {
   }
 
   return (
-    <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#bc834f] text-white text-[1.2rem]">
+    <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#bc834f] text-[#b9b9b9] text-[1.2rem]">
       <GeneralHeader />
       
       <div className="mb-20 w-full flex items-start justify-center lg:h-[100vh]">
