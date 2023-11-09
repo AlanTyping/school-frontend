@@ -31,8 +31,8 @@ export default function Home() {
   return (
     <div className='flex flex-col items-center'>
       <Header />
-      {data.map(e =>
-        <div className='h-[300px] w-[50%] my-4 rounded bg-slate-700 text-white flex flex-col items-start p-5 justify-center'>
+      {data.map((e, i) =>
+        <div key={i} className='h-[300px] w-[50%] my-4 rounded bg-slate-700 text-white flex flex-col items-start p-5 justify-center'>
           <h1>Username: {e.username}</h1><br />
           <h2>Name: {e.name}</h2>
           <h2>lastName: {e.lastName}</h2>
