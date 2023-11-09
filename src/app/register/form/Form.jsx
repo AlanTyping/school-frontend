@@ -6,7 +6,7 @@ import LineSeparator from '../components/LineSeparator';
 import './form.css'
 
 const Form = ({ handleInputChange, setSecondForm }) => {
-	const { register, handleSubmit, formState: { errors } } = useForm();
+	const { register, handleSubmit, formState: { errors }, watch } = useForm();
 
 	const onSubmit = handleSubmit(data => {
 		if (Object.keys(errors).length === 0) {
@@ -42,7 +42,7 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 
 
 			<input name='confirmPassword' type="password" placeholder="Confirmar contraseña"
-				{...register('confirmPassword', { required: { value: true, message: '*Confirmar contraseña' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, maxLength: { value: 30, message: '*Máximo 30 carácteres'} })}
+				{...register('confirmPassword', { required: { value: true, message: '*Confirmar contraseña' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, validate: (value) => watch('password') === value || '*Las contraseñas no coinciden' })}
 				onChange={handleInputChange}
 			/>
 			{errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
