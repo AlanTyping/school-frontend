@@ -1,4 +1,4 @@
-input, select {
+input {
     border-radius: 0.25rem;
     background-color: #770c0c;
     color: #b9b9b9;
@@ -17,7 +17,51 @@ span {
     width: 90%;
     text-align: start;
     color: #2563eb;
-    padding: 0.5rem;
-    margin-top: -0.5rem;
+    padding: 0.5vh;
+    margin-top: -0.5vh;
+    font-size: 2.3vh;
 }
+
+@media(min-width: 1700px) {
+    input, #select-options {
+        color: #b9b9b9;
+        font-size: 2.1vh;
+        width: 90%;
+        padding: 2vh;
+        margin-top: 1vh;
+    }
+
+    #select-options {
+        margin-bottom: 1.7vh;
+    }
+
+    input {
+        background-color: #770c0c;
+        margin-bottom: 1vh;
+    }
+
+    button {
+        font-size: 2vh;
+        height: 7vh;
+    }
+}
+
+/* @media(min-width: 3000px) {
+    input,
+    select {
+        border-radius: 0.25rem;
+        background-color: #770c0c;
+        color: #b9b9b9;
+        font-size: 1.2rem;
+        width: 90%;
+        padding: 2vh;
+        margin-top: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    button {
+        font-size: 110%;
+        height: 7vh;
+    }
+} */
 

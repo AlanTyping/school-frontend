@@ -5,6 +5,7 @@ import GeneralHeader from "../components/general header/GeneralHeader";
 import Footer from "../components/footer/Footer";
 import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
+import './registerPage.css';
 
 const Page = () => {
   const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false })
@@ -28,12 +29,12 @@ const Page = () => {
       <GeneralHeader />
       
       <div className="mb-20 w-full flex items-start justify-center lg:h-[100vh]">
-        <div className="h-[auto] w-[95%] max-w-[350px] pb-8 pt-2 p-2 mt-[8vh] flex flex-col items-center rounded bg-[#2e180b]">
+        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[20vw] pb-8 pt-2 p-2 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
-          <div className="w-[95%] mt-2 p-3 flex row justify-start text-[1.7rem] items-center h-[10%] bg-[#521c15] rounded">
+          <div id="register-title" className="w-[90%] mt-2 p-3 flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded">
             <h1>Registrate!</h1>
           </div>
-          <div className="w-[90%] mt-1 h-auto flex items-center justify-end text-[0.9rem]">
+          <div id="text-counter" className="w-[90%] mt-1 h-auto flex items-center justify-end text-[0.9rem]">
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
 

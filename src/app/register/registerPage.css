@@ -1,0 +1,19 @@
+@media(min-width: 1700px) {
+    #text-counter {
+        font-size: 1.9vh;
+    }
+    #form-container {
+        padding-top: 2vh;
+        padding-bottom: 3vh;
+        border-radius: 1rem;
+    }
+    #line-separator {
+        height: 0.3vh;
+    }
+
+    #register-title {
+        padding: 2vh;
+        height: 8vh;
+        font-size: 2.3vh;
+    }
+}

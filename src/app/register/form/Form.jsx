@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import LineSeparator from '../components/LineSeparator';
 import './form.css'
 
 const Form = ({ handleInputChange, setSecondForm }) => {
@@ -30,7 +31,7 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 			{errors.lastName && <span>{errors.lastName.message}</span>}
 
 
-			<div className="bg-[#720f0f] w-[90%] h-[2px] mt-3 mb-2" />
+			<LineSeparator />
 
 
 			<input name='password' type="password" placeholder="Contraseña"
