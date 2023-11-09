@@ -24,11 +24,11 @@ const Page = () => {
   }
 
   return (
-    <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#ffcfcf] text-white text-[1.2rem]">
+    <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#bc834f] text-white text-[1.2rem]">
       <GeneralHeader />
       
       <div className="mb-20 w-full flex items-start justify-center lg:h-[100vh]">
-        <div className="h-[auto] w-[95%] max-w-[350px] pb-6 pt-2 p-2 mt-[8vh] flex flex-col items-center rounded bg-[#2e180b]">
+        <div className="h-[auto] w-[95%] max-w-[350px] pb-8 pt-2 p-2 mt-[8vh] flex flex-col items-center rounded bg-[#2e180b]">
 
           <div className="w-[95%] mt-2 p-3 flex row justify-start text-[1.7rem] items-center h-[10%] bg-[#611616] rounded">
             <h1>Registrate!</h1>
