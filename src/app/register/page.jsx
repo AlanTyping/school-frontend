@@ -8,7 +8,7 @@ import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
 
 const page = () => {
-  const [formData, setFormData] = useState({name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false})
+  const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false })
   const [secondForm, setSecondForm] = useState(false);
 
   function handleInputChange(e) {
@@ -21,24 +21,26 @@ const page = () => {
   }
 
   const handleDataSubmit = () => {
-    console.log(formData);
-    alert(formData)
+
   }
 
   return (
     <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#ffcfcf] text-white text-[1.2rem]">
       <GeneralHeader />
-      <div className="py-10 mb-20 w-full flex items-center justify-center">
-        <div className="h-[auto] w-[95%] pb-10 pt-6 p-2 flex flex-col items-center rounded bg-[#361907]">
+      
+      <div className="py-8 mb-20 w-full flex items-center justify-center">
+        <div className="h-[auto] w-[95%] max-w-[400px] md:max-w-[500px] pb-10 pt-6 p-2 flex flex-col items-center rounded bg-[#361907]">
 
-          <div className="w-[95%] p-4 flex row justify-start text-[2rem] items-center h-[90px] bg-[#490808]">
+          <div className="w-[95%] p-4 flex row justify-start text-[2rem] items-center h-[10%] bg-[#490808]">
             <h1>Registrate!</h1>
           </div>
-          <div className="w-[90%] my-4 h-auto flex items-center justify-end">
+          <div className="w-[90%] my-2 h-auto flex items-center justify-end">
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
 
-          {secondForm ? <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} /> : <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm} />}
+          {secondForm ?
+            <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} /> :
+            <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm} />}
         </div>
       </div>
 

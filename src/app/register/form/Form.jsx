@@ -19,14 +19,14 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 		<form className="w-full flex flex-col items-center justify-center" onSubmit={onSubmit}>
 
 			<input name='name' type="text" placeholder="Nombre"
-				{...register('name', { required: { value: true, message: '*Nombre requerido' }, minLength: { value: 1, message: '*Mínimo 1 carácter'}, maxLength: { value: 15, message: '*Máximo 15 carácteres'} })}
+				{...register('name', { required: { value: true, message: '*Nombre requerido' }, minLength: { value: 1, message: '*Mínimo 1 carácter'}, maxLength: { value: 20, message: '*Máximo 20 carácteres'} })}
 				onChange={handleInputChange}
 			/>
 			{errors.name && <span>{errors.name.message}</span>}
 
 
 			<input name='lastName' type="text" placeholder="Apellido"
-				{...register('lastName', { required: { value: true, message: '*Apellido requerido' }, maxLength: { value: 15, message: '*Máximo 15 carácteres'} })}
+				{...register('lastName', { required: { value: true, message: '*Apellido requerido' }, maxLength: { value: 20, message: '*Máximo 20 carácteres'} })}
 				onChange={handleInputChange}
 			/>
 			{errors.lastName && <span>{errors.lastName.message}</span>}
