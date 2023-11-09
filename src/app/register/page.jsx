@@ -3,7 +3,6 @@
 import { useRef, useState, useEffect } from "react";
 import GeneralHeader from "../components/general header/GeneralHeader";
 import Footer from "../components/footer/Footer";
-import './register.css';
 import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
 
@@ -28,13 +27,13 @@ const page = () => {
     <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#ffcfcf] text-white text-[1.2rem]">
       <GeneralHeader />
       
-      <div className="py-8 mb-20 w-full flex items-center justify-center">
-        <div className="h-[auto] w-[95%] max-w-[400px] md:max-w-[500px] pb-10 pt-6 p-2 flex flex-col items-center rounded bg-[#361907]">
+      <div className="mb-20 w-full flex items-start justify-center lg:h-[100vh]">
+        <div className="h-[auto] w-[95%] max-w-[350px] pb-6 pt-2 p-2 mt-[8vh] flex flex-col items-center rounded bg-[#361907]">
 
-          <div className="w-[95%] p-4 flex row justify-start text-[2rem] items-center h-[10%] bg-[#490808]">
+          <div className="w-[95%] mt-2 p-3 flex row justify-start text-[1.7rem] items-center h-[10%] bg-[#490808]">
             <h1>Registrate!</h1>
           </div>
-          <div className="w-[90%] my-2 h-auto flex items-center justify-end">
+          <div className="w-[90%] mt-1 h-auto flex items-center justify-end text-[0.9rem]">
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
 

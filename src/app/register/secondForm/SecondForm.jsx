@@ -43,7 +43,7 @@ const SecondForm = ({ handleInputChange, handleDataSubmit }) => {
 
 			<div className="bg-[#7e1818] w-[90%] h-[2px] my-4" />
 
-			<select className="p-4 py-6 my-2 mb-8 bg-[#0f3b13] w-[90%] text-start rounded" {...register('role')} onChange={handleInputChange}>
+			<select className="p-4 py-4 my-2 mb-8 bg-[#0f3b13] w-[90%] text-start rounded" {...register('role')} onChange={handleInputChange}>
 				<option value="" disabled>Elije rol</option>
 				<option value="student">Estudiante</option>
 				<option value="teacher">Profesor</option>
@@ -51,8 +51,9 @@ const SecondForm = ({ handleInputChange, handleDataSubmit }) => {
 			</select>
 
 			<ReCAPTCHA sitekey="6Lfg7OEoAAAAAO-0UlVU_kEtcTEp4b_U05YevLHi" />
+
 			<div className="w-full h-[auto] mt-8 flex items-center justify-center">
-				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Submit</button>
+				<button className="bg-[#1b7423] py-2 w-[90%] rounded" type="submit">Submit</button>
 			</div>
 		</form>
 	)

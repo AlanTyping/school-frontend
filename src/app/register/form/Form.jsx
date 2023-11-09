@@ -12,9 +12,7 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 			setSecondForm(true)
 		}
 	})
-
-	console.log(errors)
-
+	
 	return (
 		<form className="w-full flex flex-col items-center justify-center" onSubmit={onSubmit}>
 
@@ -32,7 +30,7 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 			{errors.lastName && <span>{errors.lastName.message}</span>}
 
 
-			<div className="bg-[#720f0f] w-[90%] h-[2px] mt-6 mb-4" />
+			<div className="bg-[#720f0f] w-[90%] h-[2px] mt-3 mb-2" />
 
 
 			<input name='password' type="password" placeholder="Contraseña"
@@ -48,8 +46,8 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 			/>
 			{errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
 
-			<div className="w-full h-[auto] mt-8 flex items-center justify-center">
-				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Siguiente</button>
+			<div className="w-full h-[auto] mt-6 flex items-center justify-center">
+				<button className="bg-[#1b7423] py-2 w-[90%] rounded" type="submit">Siguiente</button>
 			</div>
 		</form>
 	)
