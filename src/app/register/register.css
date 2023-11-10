@@ -2,6 +2,10 @@ a {
     color: #2563eb;
 }
 
+#register-login-option {
+    font-size: 1.1rem;
+}
+
 @media(min-width: 1700px) {
     #text-counter {
         font-size: 1.2vw;
@@ -20,5 +24,9 @@ a {
         padding: 2vw;
         height: 6vw;
         font-size: 2vw;
+    }
+
+    #register-login-option {
+        margin-top: 1vw;
     }
 }
