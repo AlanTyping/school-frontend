@@ -2,7 +2,7 @@ input {
     border-radius: 0.25rem;
     background-color: #770c0c;
     color: #b9b9b9;
-    font-size: 0.97rem;
+    font-size: 1rem;
     width: 90%;
     padding: 0.8rem;
     margin-top: 0.7rem;
@@ -29,6 +29,10 @@ span {
         width: 90%;
         padding: 1.1vw;
         margin-top: 1vh;
+    }
+
+    #register-login-option {
+        font-size: 1vw;
     }
 
     #select-options {

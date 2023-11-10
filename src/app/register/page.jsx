@@ -5,6 +5,7 @@ import GeneralHeader from "../components/general header/GeneralHeader";
 import Footer from "../components/footer/Footer";
 import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
+import Link from "next/link";
 import './register.css';
 
 const Page = () => {
@@ -42,6 +43,10 @@ const Page = () => {
           {secondForm ?
             <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} /> :
             <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm} />}
+
+            <div id="register-login-option" className="text-[1rem] mt-4 text-start w-[90%] ">
+              <p>¿Tienes una cuenta? <Link href="login">inicia sesión</Link></p>
+            </div>
         </div>
       </div>
 

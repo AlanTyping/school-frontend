@@ -1,3 +1,7 @@
+a {
+    color: #2563eb;
+}
+
 @media(min-width: 1700px) {
     #text-counter {
         font-size: 1.2vw;
