@@ -1,0 +1,59 @@
+input {
+    border-radius: 0.25rem;
+    background-color: #770c0c;
+    color: #b9b9b9;
+    font-size: 1rem;
+    width: 90%;
+    padding: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    font-size: 0.99rem;
+}
+
+span {
+    width: 90%;
+    text-align: start;
+    color: #2563eb;
+    padding: 0.5vh;
+    margin-top: -0.5vh;
+    font-size: 2.3vh;
+}
+
+@media(min-width: 1700px) {
+    input, #select-options {
+        color: #b9b9b9;
+        font-size: 1.2vw;
+        width: 90%;
+        padding: 1.1vw;
+        margin-top: 1vh;
+    }
+
+    #register-login-option {
+        font-size: 1vw;
+    }
+
+    #select-options {
+        margin-bottom: 1.7vh;
+    }
+
+    option {
+        font-size: 1vw;
+    }
+
+    span {
+        font-size: 1.2vw;
+    }
+
+    input {
+        background-color: #770c0c;
+        margin-bottom: 1vh;
+    }
+
+    button {
+        font-size: 1.3vw;
+        height: 3.5vw;
+    }
+}
