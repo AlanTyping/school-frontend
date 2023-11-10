@@ -33,10 +33,17 @@ span {
   input,
   #select-options {
     color: #b9b9b9;
-    font-size: 2.1vh;
+    font-size: 1.1vw;
     width: 90%;
-    padding: 2vh;
+    padding: 1.2vw;
     margin-top: 1vh;
+  }
+
+  #register-title {
+    height: 9vh;
+    font-size: 1.5vw;
+    padding: 1.5vw;
+    min-height: 100px;
   }
 
   #select-options {
@@ -45,16 +52,23 @@ span {
 
   input {
     background-color: #770c0c;
-    margin-bottom: 1vh;
+    margin-bottom: 0.3vw;
   }
 
   button {
-    font-size: 2vh;
-    height: 7vh;
+    font-size: 1.1vw;
+    height: 4vw;
+    margin-top: 1vw;
   }
 
   #password-reset-question,
   #login-footer {
-    font-size: 2vh;
+    font-size: 1vw;
   }
 }
+
+/* @media(min-width: 3000px) {
+  #register-title {
+    height: ;
+  }
+} */
