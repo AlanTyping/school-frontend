@@ -36,7 +36,7 @@ const SecondForm = ({ handleInputChange, handleDataSubmit }) => {
 
 	return (
 		<form onSubmit={onSubmit} className="w-full flex flex-col items-center justify-center">
-			<input type="text" placeholder="username"
+			<input type="text" placeholder="Username"
 				{...register('username', { required: { value: true, message: '*Username requerido' }, maxLength: { value: 15, message: '*Máximo 15 carácteres' } })}
 				onChange={handleInputChange}
 			/>
