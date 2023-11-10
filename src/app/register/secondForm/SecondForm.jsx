@@ -40,7 +40,7 @@ const SecondForm = ({ handleInputChange, handleDataSubmit }) => {
 			/>
 			{errors.username && <span>{errors.username.message}</span>}
 
-			<input type="email" placeholder="email"
+			<input type="email" placeholder="Email"
 				{...register('email', { required: { value: true, message: '*Email requerido' }, pattern: { value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, message: 'Correo no válido' }, maxLength: { value: 50, message: '*Máximo 50 carácteres' } })}
 				onChange={handleInputChange}
 			/>

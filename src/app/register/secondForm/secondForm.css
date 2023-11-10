@@ -45,23 +45,3 @@ span {
         height: 7vh;
     }
 }
-
-/* @media(min-width: 3000px) {
-    input,
-    select {
-        border-radius: 0.25rem;
-        background-color: #770c0c;
-        color: #b9b9b9;
-        font-size: 1.2rem;
-        width: 90%;
-        padding: 2vh;
-        margin-top: 0.7rem;
-        margin-bottom: 0.5rem;
-    }
-
-    button {
-        font-size: 110%;
-        height: 7vh;
-    }
-} */
-
