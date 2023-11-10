@@ -42,7 +42,7 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 
 
 			<input name='confirmPassword' type="password" placeholder="Confirmar contraseña"
-				{...register('confirmPassword', { required: { value: true, message: '*Confirmar contraseña' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, validate: (value) => watch('password') === value || '*Las contraseñas no coinciden' })}
+				{...register('confirmPassword', { required: { value: true, message: '*Confirmar contraseña' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, validate: (value) => watch('password') === value || 'contraseñas no coinciden' })}
 				onChange={handleInputChange}
 			/>
 			{errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
