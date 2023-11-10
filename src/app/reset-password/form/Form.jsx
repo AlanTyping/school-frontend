@@ -23,7 +23,7 @@ const Form = ({ handleInputChange }) => {
 			{errors.email && <span>{errors.email.message}</span>}
 
 			<div className="w-full h-[auto] mt-6 flex items-center justify-center">
-				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Iniciar sesión</button>
+				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Enviar solicitud</button>
 			</div>
 		</form>
 	)
