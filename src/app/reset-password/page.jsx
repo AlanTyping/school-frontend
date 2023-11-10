@@ -24,7 +24,7 @@ const Page = () => {
       <div className="mb-20 w-full flex items-start justify-center min-h-[600px] lg:h-[100vh]">
         <div id="form-container" className="h-[auto] w-[95%] max-w-[325px] 2xl:max-w-[20vw] pb-8 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
-          <div id="register-title" className="w-full p-6 flex row justify-start h-[100px] 2xl:p-[1.5vw] 2xl:text-[1.6vw] 2xl:h-[5vw] text-[1.6rem] items-center bg-[#521c15] rounded-t-lg">
+          <div id="register-title" className="w-full p-6 flex row justify-start h-[100px] 2xl:pt-[2vw]  2xl:p-[2vw] 2xl:text-[1.6vw] 2xl:h-[5vw] text-[1.6rem] items-center bg-[#521c15] rounded-t-lg">
             <h1>Cambiar contraseña</h1>
           </div>
 
