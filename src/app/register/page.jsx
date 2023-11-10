@@ -5,7 +5,7 @@ import GeneralHeader from "../components/general header/GeneralHeader";
 import Footer from "../components/footer/Footer";
 import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
-import './registerPage.css';
+import './register.css';
 
 const Page = () => {
   const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false })

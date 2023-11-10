@@ -30,7 +30,6 @@ span {
 }
 
 @media(min-width: 1700px) {
-
   input,
   #select-options {
     color: #b9b9b9;
@@ -52,5 +51,10 @@ span {
   button {
     font-size: 2vh;
     height: 7vh;
+  }
+
+  #password-reset-question,
+  #login-footer {
+    font-size: 2vh;
   }
 }

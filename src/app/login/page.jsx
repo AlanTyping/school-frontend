@@ -21,7 +21,7 @@ const Page = () => {
 
           <Form />
 
-          <div id='login-footer' className='w-full h-[auto] p-4 mt-[1vh] text-[1.1rem]'>
+          <div id='password-reset-question' className='w-full h-[auto] p-4 pl-6 mt-[1vh] text-[1.1rem]'>
             <Link href="reset-password">¿Olvidaste tu contraseña?</Link>
           </div>
 
