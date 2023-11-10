@@ -1,6 +1,6 @@
 @media(min-width: 1700px) {
     #text-counter {
-        font-size: 2vh;
+        font-size: 1.2vw;
         margin: 0.5vh;
     }
     #form-container {
@@ -12,9 +12,9 @@
     }
 
     #register-title {
-        border-radius: 1rem;
-        padding: 3vh;
-        height: 10vh;
-        font-size: 3vh;
+        border-radius: 1rem 1rem 0 0;
+        padding: 2vw;
+        height: 6vw;
+        font-size: 2vw;
     }
 }

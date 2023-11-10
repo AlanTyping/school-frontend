@@ -1,5 +1,5 @@
 import React from 'react';
-import '../registerPage.css';
+import '../register.css';
 
 const LineSeparator = () => {
   return (

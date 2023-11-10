@@ -31,9 +31,10 @@ const Page = () => {
       <div className="mb-20 w-full flex items-start justify-center lg:h-[100vh]">
         <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[20vw] pb-8 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
-          <div id="register-title" className="w-full p-6 flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded">
+          <div id="register-title" className="w-full p-6 flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded-t-lg">
             <h1>Registrate!</h1>
           </div>
+
           <div id="text-counter" className="w-[90%] mt-1 px-2 h-auto flex items-center justify-end text-[0.9rem]">
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
