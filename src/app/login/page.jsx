@@ -1,6 +1,7 @@
 import React from 'react';
 import GeneralHeader from '../components/general header/GeneralHeader';
 import Footer from '../components/footer/Footer';
+import Form from './form/Form';
 import './login.css';
 
 const Page = () => {
@@ -14,6 +15,8 @@ const Page = () => {
         <div id="register-title" className="w-full p-6 flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded">
           <h1>Login</h1>
         </div>
+
+        <Form />
       </div>
     </div>
 
