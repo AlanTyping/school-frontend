@@ -23,7 +23,7 @@ const Page = () => {
       <GeneralHeader />
 
       <div className="mb-20 w-full flex items-start justify-center lg:h-[60vw]">
-        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[25vw] pb-4 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
+        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] md:max-w-[23vw] pb-4 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
           <div id="register-title" className="w-full p-[1.2rem] flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded-t-lg">
             <h1>Registrate!</h1>

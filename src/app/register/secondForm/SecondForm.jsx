@@ -54,7 +54,7 @@ const SecondForm = ({ register, errors, watch, handleSubmit, isLoading }) => {
 
       <LineSeparator />
 
-      <select id='select-options' defaultValue="" className="p-4 py-4 my-2 bg-[#0f3b13] w-[90%] text-start rounded" {...register('role', { validate: () => options.includes(watch('role')) || '*Elige rol' })}>
+      <select id='select-options' defaultValue="" className="p-4 py-4 my-2 text-[1.15rem] bg-[#0f3b13] w-[90%] text-start rounded" {...register('role', { validate: () => options.includes(watch('role')) || '*Elige rol' })}>
         <option value="" disabled>Elige rol</option>
         <option value="student">Estudiante</option>
         <option value="teacher">Profesor</option>
@@ -66,8 +66,9 @@ const SecondForm = ({ register, errors, watch, handleSubmit, isLoading }) => {
       {showCaptchaMessage && <span>*Aprobar captcha</span>}
 
       <div className="w-full h-[auto] mt-8 flex items-center justify-center">
-        <button className="bg-[#1b7423] py-3 w-[90%] rounded text-[1.2p5rem]" type="submit">Submit</button>
+        <button className="bg-[#1b7423] py-2 w-[90%] rounded text-[1.1rem]" type="submit">Submit</button>
       </div>
+
       {errorMessage && <p id='error-message' className='text-[1.1rem] md:text-[1.1vw]'>*{errorMessage}</p>}
       {isLoading && <p id='error-message' className='text-[1.1rem] md:text-[1.1vw]'>{"ESSTA CARGAANDO"}</p>}
     </form>
