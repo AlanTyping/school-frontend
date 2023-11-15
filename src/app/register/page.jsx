@@ -6,34 +6,22 @@ import Footer from "../components/footer/Footer";
 import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
-import { register } from './axiosQueries/register';
+import { useForm } from 'react-hook-form';
 import './register.css';
 
 const Page = () => {
-  const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', username: '', password: '' })
   const [secondForm, setSecondForm] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(null);
-  const router = useRouter()
+  const { register, handleSubmit, formState: { errors, isLoading }, watch } = useForm();
 
-  function handleInputChange(e) {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  }
 
-  const handleDataSubmit = async () => {
-    const result = await register(formData);
-    if (result.status === 200) return router.push('/login');
-    setErrorMessage(result.response.data.message); 
-  }
+  useEffect(() => {
+    if (isLoading) alert("loading")
+  }, [isLoading])
 
   return (
     <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#1f1f1f] text-[#b9b9b9] text-[1.2rem]">
       <GeneralHeader />
-      
+
       <div className="mb-20 w-full flex items-start justify-center lg:h-[60vw]">
         <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[25vw] pb-4 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
@@ -45,13 +33,13 @@ const Page = () => {
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
 
-          {secondForm ?
-            <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} errorMessage={errorMessage} /> :
-            <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm}/>}
+          {secondForm ? <SecondForm register={register} errors={errors} watch={watch} handleSubmit={handleSubmit} isLoading={isLoading} />
+            :
+            <Form setSecondForm={setSecondForm} register={register} errors={errors} watch={watch} handleSubmit={handleSubmit} />}
 
-            <div id="register-login-option" className="text-[1rem] 2xl:text-[1.05vw] mt-6 2xl:mt-[1.5vw] text-start w-[90%] ">
-              <p>¿Tienes una cuenta? <Link href="login">inicia sesión</Link></p>
-            </div>
+          <div id="register-login-option" className="text-[1rem] 2xl:text-[1.05vw] mt-6 2xl:mt-[1.5vw] text-start w-[90%] ">
+            <p>¿Tienes una cuenta? <Link href="login">inicia sesión</Link></p>
+          </div>
         </div>
       </div>
 
