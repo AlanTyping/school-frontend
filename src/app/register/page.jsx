@@ -49,7 +49,7 @@ const Page = () => {
             <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} errorMessage={errorMessage} /> :
             <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm}/>}
 
-            <div id="register-login-option" className="text-[1rem] mt-6 text-start w-[90%] ">
+            <div id="register-login-option" className="text-[1rem] 2xl:text-[1.05vw] mt-6 2xl:mt-[1.5vw] text-start w-[90%] ">
               <p>¿Tienes una cuenta? <Link href="login">inicia sesión</Link></p>
             </div>
         </div>
