@@ -6,11 +6,15 @@ import Footer from "../components/footer/Footer";
 import Form from "./form/Form";
 import SecondForm from "./secondForm/SecondForm";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
+import { register } from './axiosQueries/register';
 import './register.css';
 
 const Page = () => {
-  const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', username: '', password: '', confirmPassword: '', auth: false })
+  const [formData, setFormData] = useState({ name: '', lastName: '', email: '', role: '', username: '', password: '' })
   const [secondForm, setSecondForm] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const router = useRouter()
 
   function handleInputChange(e) {
     const { name, value } = e.target;
@@ -18,11 +22,12 @@ const Page = () => {
       ...formData,
       [name]: value,
     });
-    console.log(formData)
   }
 
-  const handleDataSubmit = () => {
-
+  const handleDataSubmit = async () => {
+    const result = await register(formData);
+    if (result.status === 200) return router.push('/login');
+    setErrorMessage(result.response.data.message);
   }
 
   return (
@@ -41,8 +46,8 @@ const Page = () => {
           </div>
 
           {secondForm ?
-            <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} /> :
-            <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm} />}
+            <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} errorMessage={errorMessage} /> :
+            <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm}/>}
 
             <div id="register-login-option" className="text-[1rem] mt-4 text-start w-[90%] ">
               <p>¿Tienes una cuenta? <Link href="login">inicia sesión</Link></p>

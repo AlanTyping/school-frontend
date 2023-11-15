@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 import LineSeparator from '../components/LineSeparator';
 import './secondForm.css';
 
-const SecondForm = ({ handleInputChange, handleDataSubmit }) => {
+const SecondForm = ({ handleInputChange, handleDataSubmit, errorMessage }) => {
 	const recaptchaRef = useRef(null)
 	const [isVerified, setIsverified] = useState(false);
 	const [showCaptchaMessage, setShowCaptchaMessage] = useState(false);
@@ -62,8 +62,9 @@ const SecondForm = ({ handleInputChange, handleDataSubmit }) => {
 			{showCaptchaMessage && <span>*Aprobar captcha</span>}
 
 			<div className="w-full h-[auto] mt-8 flex items-center justify-center">
-				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Submit</button>
+				<button className="bg-[#1b7423] py-3 w-[90%] rounded text-[1.2p5rem]" type="submit">Submit</button>
 			</div>
+			{errorMessage && <p id='error-message'>*{errorMessage}</p>}
 		</form>
 	)
 }

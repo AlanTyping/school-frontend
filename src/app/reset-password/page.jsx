@@ -7,7 +7,7 @@ import Form from "./form/Form";
 import './reset-password.css';
 
 const Page = () => {
-  const [formData, setFormData] = useState({ email: '' })
+  const [formData, setFormData] = useState({ email: '' });
 
   function handleInputChange(e) {
     const { name, value } = e.target;
@@ -15,7 +15,7 @@ const Page = () => {
       ...formData,
       [name]: value,
     });
-  }
+  };
 
   return (
     <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#1f1f1f] text-[#b9b9b9] text-[1.2rem]">
