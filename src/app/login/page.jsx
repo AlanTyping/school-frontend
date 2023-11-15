@@ -21,11 +21,11 @@ const Page = () => {
 
           <Form />
 
-          <div id='password-reset-question' className='w-full h-[auto] p-4 2xl:pl-[1.3vw] pl-6 mt-[1vh] text-[1.1rem]'>
+          <div id='password-reset-question' className='w-full h-[auto] p-4 2xl:pl-[1.3vw] pl-6 mt-[1vh] text-[1rem]'>
             <Link href="reset-password">¿Olvidaste tu contraseña?</Link>
           </div>
 
-          <div id='login-footer' className='w-full text-[1.1rem] h-[100px] 2xl:h-[5vw] 2xl:mt-[1vw] p-4 flex-col bg-[#291407] flex items-center justify-evenly rounded-b-lg'>
+          <div id='login-footer' className='w-full text-[1rem] h-[80px] 2xl:h-[5vw] 2xl:mt-[1vw] p-4 flex-col bg-[#291407] flex items-center justify-evenly rounded-b-lg'>
             <p className='text-[#c9c9c9]'>¿No tienes cuenta? <Link href="register" id='registrate-link'>Registrate</Link></p>
           </div>
         </div>

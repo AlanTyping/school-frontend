@@ -27,17 +27,17 @@ const Page = () => {
   const handleDataSubmit = async () => {
     const result = await register(formData);
     if (result.status === 200) return router.push('/login');
-    setErrorMessage(result.response.data.message);
+    setErrorMessage(result.response.data.message); 
   }
 
   return (
     <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#1f1f1f] text-[#b9b9b9] text-[1.2rem]">
       <GeneralHeader />
       
-      <div className="mb-20 w-full flex items-start justify-center lg:h-[100vh]">
-        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[20vw] pb-8 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
+      <div className="mb-20 w-full flex items-start justify-center lg:h-[60vw]">
+        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] 2xl:max-w-[20vw] pb-4 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
-          <div id="register-title" className="w-full p-6 flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded-t-lg">
+          <div id="register-title" className="w-full p-[1.2rem] flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded-t-lg">
             <h1>Registrate!</h1>
           </div>
 
@@ -49,7 +49,7 @@ const Page = () => {
             <SecondForm handleInputChange={handleInputChange} handleDataSubmit={handleDataSubmit} errorMessage={errorMessage} /> :
             <Form handleInputChange={handleInputChange} setSecondForm={setSecondForm}/>}
 
-            <div id="register-login-option" className="text-[1rem] mt-4 text-start w-[90%] ">
+            <div id="register-login-option" className="text-[1rem] mt-6 text-start w-[90%] ">
               <p>¿Tienes una cuenta? <Link href="login">inicia sesión</Link></p>
             </div>
         </div>

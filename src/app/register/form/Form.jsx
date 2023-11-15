@@ -35,20 +35,20 @@ const Form = ({ handleInputChange, setSecondForm }) => {
 
 
 			<input name='password' type="password" placeholder="Contraseña"
-				{...register('password', { required: { value: true, message: '*Contraseña requerida' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, maxLength: { value: 30, message: '*Máximo 30 carácteres'} })}
+				{...register('password', { required: { value: true, message: '*Contraseña requerida' }, minLength: { value: 8, message: '*Mínimo 8 carácteres'}, maxLength: { value: 30, message: '*Máximo 30 carácteres'} })}
 				onChange={handleInputChange}
 			/>
 			{errors.password && <span>{errors.password.message}</span>}
 
 
 			<input name='confirmPassword' type="password" placeholder="Confirmar contraseña"
-				{...register('confirmPassword', { required: { value: true, message: '*Confirmar contraseña' }, minLength: { value: 6, message: '*Mínimo 6 carácteres'}, validate: (value) => watch('password') === value || 'contraseñas no coinciden' })}
+				{...register('confirmPassword', { required: { value: true, message: '*Confirmar contraseña' }, validate: (value) => watch('password') === value || 'contraseñas no coinciden' })}
 				onChange={handleInputChange}
 			/>
 			{errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
 
 			<div className="w-full h-[auto] mt-6 flex items-center justify-center">
-				<button className="bg-[#1b7423] py-3 w-[90%] rounded" type="submit">Siguiente</button>
+				<button className="bg-[#1b7423] py-3 w-[90%] text-[1.1rem] rounded" type="submit">Siguiente</button>
 			</div>
 		</form>
 	)

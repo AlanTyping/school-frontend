@@ -64,7 +64,7 @@ const SecondForm = ({ handleInputChange, handleDataSubmit, errorMessage }) => {
 			<div className="w-full h-[auto] mt-8 flex items-center justify-center">
 				<button className="bg-[#1b7423] py-3 w-[90%] rounded text-[1.2p5rem]" type="submit">Submit</button>
 			</div>
-			{errorMessage && <p id='error-message'>*{errorMessage}</p>}
+			{errorMessage && <p id='error-message' className='text-[1rem] md:text-[1.1vw]'>*{errorMessage}</p>}
 		</form>
 	)
 }
