@@ -1,0 +1,7 @@
+#mobile-nav {
+    transition: margin 0.3s ease-in-out;
+}
+
+.mobile-nav-hidden {
+    margin-bottom: -80px;
+}

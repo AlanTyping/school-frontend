@@ -11,21 +11,16 @@ import './register.css';
 
 const Page = () => {
   const [secondForm, setSecondForm] = useState(false);
-  const { register, handleSubmit, formState: { errors, isLoading }, watch } = useForm();
-
-
-  useEffect(() => {
-    if (isLoading) alert("loading")
-  }, [isLoading])
-
+  const { register, handleSubmit, formState: { errors, isSubmitting }, watch } = useForm();
+  
   return (
     <div className="h-[auto] min-h-[720px] w-full items-center justify-center flex flex-col bg-[#1f1f1f] text-[#b9b9b9] text-[1.2rem]">
       <GeneralHeader />
 
       <div className="mb-20 w-full flex items-start justify-center lg:h-[60vw]">
-        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] md:max-w-[23vw] pb-4 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
+        <div id="form-container" className="h-[auto] w-[95%] max-w-[350px] md:max-w-[25vw] pb-4 mt-[9vh] flex flex-col items-center rounded bg-[#2e180b]">
 
-          <div id="register-title" className="w-full p-[1.2rem] flex row justify-start text-[1.65rem] items-center bg-[#521c15] rounded-t-lg">
+          <div id="register-title" className="w-full p-[1.2rem] flex row justify-start text-[1.6rem] items-center bg-[#521c15] rounded-t-lg">
             <h1>Registrate!</h1>
           </div>
 
@@ -33,7 +28,7 @@ const Page = () => {
             <h2>{secondForm ? '2' : '1'}/2</h2>
           </div>
 
-          {secondForm ? <SecondForm register={register} errors={errors} watch={watch} handleSubmit={handleSubmit} isLoading={isLoading} />
+          {secondForm ? <SecondForm register={register} errors={errors} watch={watch} handleSubmit={handleSubmit} />
             :
             <Form setSecondForm={setSecondForm} register={register} errors={errors} watch={watch} handleSubmit={handleSubmit} />}
 

@@ -9,19 +9,19 @@ import { useRouter } from 'next/navigation';
 import { registerQuery } from './axiosQueries/register';
 import './secondForm.css';
 
-const SecondForm = ({ register, errors, watch, handleSubmit, isLoading }) => {
+const SecondForm = ({ register, errors, handleSubmit, watch }) => {
   const recaptchaRef = useRef(null)
   const [isVerified, setIsverified] = useState(false);
   const [showCaptchaMessage, setShowCaptchaMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const router = useRouter();
 
-  const submit = handleSubmit(async () => {
+  const submit = handleSubmit(async (data) => {
     if (!isVerified) return setShowCaptchaMessage(true);
     setShowCaptchaMessage(false);
 
     if (Object.keys(errors).length === 0) {
-      const {confirmPassword: _, ...userData} = watch()
+      const {confirmPassword: _, ...userData} = data
 
       const result = await registerQuery(userData);
 
@@ -70,7 +70,6 @@ const SecondForm = ({ register, errors, watch, handleSubmit, isLoading }) => {
       </div>
 
       {errorMessage && <p id='error-message' className='text-[1.1rem] md:text-[1.1vw]'>*{errorMessage}</p>}
-      {isLoading && <p id='error-message' className='text-[1.1rem] md:text-[1.1vw]'>{"ESSTA CARGAANDO"}</p>}
     </form>
   )
 }

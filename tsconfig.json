@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/components/footer-nav/FooterNav.jsx", "src/app/components/mobile-header/MobileHeader.jsx", "src/app/components/header-change/HeaderChange.jsx"  ],
   "exclude": [
     "node_modules"
   ]

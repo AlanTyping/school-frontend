@@ -1,11 +1,10 @@
 'use client'
 
 import React from 'react';
-import Nav from '../nav/Nav';
 import { useState, useEffect } from 'react';
-import './header.css';
+import './footerNav.css';
 
-const Header = () => {
+const FooterNav = () => {
   const [hidden, setHidden] = useState(false);
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
@@ -19,19 +18,16 @@ const Header = () => {
       }
       setLastScrollPosition(currentScrollPosition);
     };
- 
-    window.addEventListener('scroll', handleScroll);
 
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollPosition]);
 
   return (
-      <header className={`${hidden && 'header-hidden'} h-[80px] bg-blue-400 flex justify-center xl:h-[80px] top-0 fixed w-full`}>
-        <Nav />
-      </header>
+    <nav id='mobile-nav' className={`${hidden ? 'mobile-nav-hidden' : 'mobile-nav'} fixed bottom-0 w-full h-[70px] bg-red-700 md:hidden`}></nav>
   )
 }
 
-export default Header
+export default FooterNav
